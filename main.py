@@ -12,7 +12,7 @@ genai.configure(api_key=API_KEY)
 
 def query_ai(prompt):
     try:
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel("gemini-1.5-flash")
         response = model.generate_content(prompt)
         return response.text if response else "No response from AI."
     except Exception as e:
